@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Song;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class SongController extends Controller
 {
@@ -13,7 +14,7 @@ class SongController extends Controller
      */
     public function index(): Response
     {
-        return response(Song::all());
+        return Inertia::render('Songs', ['songs' => Song::all()]);
     }
 
     /**
