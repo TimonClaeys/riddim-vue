@@ -7,5 +7,10 @@ defineProps({
 </script>
 
 <template>
-    <h1>{{ song.title }}</h1>
+    <div class="flex justify-between">
+        <h1 class="w-24">{{ song.title }}</h1>
+        <h1 class="w-24">{{ song.year }}</h1>
+        <h1 class="w-24">{{ song.producer }}</h1>
+    </div>
+
 </template>
